@@ -29,18 +29,25 @@
                     <th scope="col">AKSI</th>
                 </tr>
             </thead>
+            <?php
+                $i = 1;
+                foreach($data['mhs'] as $mhs){
+            ?>
             <tbody>
                 <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <th scope="row"><?= $i++ ?></th>
+                    <td><?= $mhs['nama'] ?></td>
+                    <td><?= $mhs['nim'] ?></td>
+                    <td><?= $mhs['tempat_lahir'] . ', ' . $mhs['tanggal_lahir'] ?></td>
+                    <td><?= $mhs['kontak'] ?></td>
                     <td>
                     <a href="" class="badge badge-primary"><i class="fa fa-edit"></i></a>
 					<a href="" class="badge badge-primary"><i class="fa fa-eraser"></i></a>
                     </td>
                 </tr>
             </tbody>
+            <?php
+                }
+            ?>
         </table>
     </div>
