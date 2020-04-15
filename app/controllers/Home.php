@@ -1,7 +1,9 @@
 <?php
 
-class Home{
-    public function index($name){
-        echo 'Henlo nama saya '.$name;
+class Home extends Controller{
+    public function index(){
+        $this->view('templates/header');
+        $this->view('home/index');
+        $this->view('templates/footer');
     }
 }
